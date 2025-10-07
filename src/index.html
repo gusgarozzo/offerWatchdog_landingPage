@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <!-- Metadatos de SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Productos | Tu asistente de precios y ofertas en Chrome</title>
+    <meta name="description" content="Monitor de Productos es la extensión de Chrome gratuita que te ayuda a seguir precios, ofertas y disponibilidad en tus tiendas online favoritas. ¡Empieza a ahorrar hoy!">
+    <meta name="keywords" content="monitor de precios, extensión chrome, ofertas, seguimiento de productos, ahorrar, compras online">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    
+    <!-- Tailwind CSS CDN y configuración (incluye Inter font) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuración de la fuente Inter y CSS base */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+        /* Clase para el fondo del hero */
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        /* Estilo para un efecto de caja en las tarjetas */
+        .card-shadow {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- HERO SECTION (Encabezado) -->
+    <header class="hero-bg text-white py-16 sm:py-24">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                Monitor de Productos
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-10 opacity-90">
+                Tu asistente para seguir <strong>precios, ofertas y disponibilidad</strong> en tus tiendas online favoritas.
+            </p>
+            <a href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba" target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white text-lg sm:text-xl font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Descargar extensión (¡Es Gratis!)
+            </a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE MOCKUP VISUAL (Iconografía o Simulación) -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl border border-gray-100">
+                <!-- Simulación simple de la interfaz de la extensión en un navegador -->
+                <div class="bg-gray-800 rounded-t-lg p-2 flex items-center space-x-2">
+                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div class="flex-grow bg-gray-700 text-gray-400 text-xs text-center py-1 px-4 rounded-md">
+                        Tienda Online de Ejemplo / Producto X
+                    </div>
+                </div>
+                <div class="p-4 sm:p-8 border-t border-gray-200">
+                    <div class="flex flex-col lg:flex-row items-center justify-between">
+                        <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-10 text-center lg:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">No te pierdas el momento justo para comprar.</h2>
+                            <p class="text-gray-600 text-lg mb-6">
+                                La extensión te muestra un historial de precios y te notifica instantáneamente cuando el artículo que deseas baja de valor o vuelve al stock.
+                            </p>
+                            <!-- Barra simulada de la extensión -->
+                            <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                                <p class="font-semibold text-blue-800">
+                                    💰 ¡Alerta! El precio bajó de $150 a $99.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 w-full max-w-md">
+                            <!-- Placeholder visual: Gráfico de ejemplo -->
+                            <div class="bg-gray-100 p-6 rounded-lg shadow-inner border border-gray-300">
+                                <p class="text-sm font-medium text-center text-gray-500 mb-4">Gráfico de Precio Histórico</p>
+                                <svg viewbox="0 0 300 150" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Ejes -->
+                                    <line x1="20" y1="20" x2="20" y2="130" stroke="#9ca3af" stroke-width="1"/>
+                                    <line x1="20" y1="130" x2="280" y2="130" stroke="#9ca3af" stroke-width="1"/>
+                                    <!-- Datos de ejemplo: Precio bajando (simulado) -->
+                                    <polyline fill="none" stroke="#f59e0b" stroke-width="3" 
+                                              points="20,100 80,80 140,90 200,60 260,30" 
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                    <!-- Punto de alerta (más bajo) -->
+                                    <circle cx="260" cy="30" r="5" fill="#ef4444"/>
+                                    <text x="250" y="25" class="text-xs fill-red-600 font-bold">¡Hoy!</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CÓMO FUNCIONA -->
+    <section id="como-funciona" class="py-20">
+        <div class="container mx-auto px-6 text-center max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">Fácil de usar en 3 simples pasos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Paso 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl card-shadow flex flex-col items-center">
+                    <span class="text-5xl text-blue-600 mb-4">1</span>
+                    <div class="text-3xl mb-3">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Instalá la extensión</h3>
+                    <p class="text-gray-600">
+                        Añadí "Monitor de Productos" desde la Chrome Web Store en un solo clic.
+                    </p>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl card-shadow flex flex-col items-center">
+                    <span class="text-5xl text-blue-600 mb-4">2</span>
+                    <div class="text-3xl mb-3">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Seleccioná tus favoritos</h3>
+                    <p class="text-gray-600">
+                        Navegá por tus tiendas y marcá los productos que querés seguir.
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl card-shadow flex flex-col items-center">
+                    <span class="text-5xl text-blue-600 mb-4">3</span>
+                    <div class="text-3xl mb-3">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Recibí alertas</h3>
+                    <p class="text-gray-600">
+                        Te avisamos cuando el precio baje o el producto vuelva a estar disponible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE BENEFICIOS -->
+    <section class="py-20 bg-blue-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-10 text-center">Beneficios clave</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1M12 8V7m0 12v-1m-2-2h4M12 0a12 12 0 100 24 12 12 0 000-24z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Ahorro Inteligente</h3>
+                        <p class="text-gray-600">
+                            Nunca más pagues de más. Te asegurás de comprar siempre al mejor precio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">100% Gratuita</h3>
+                        <p class="text-gray-600">
+                            Todas las funciones esenciales de seguimiento de precios están disponibles sin costo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Ahorrá Tiempo</h3>
+                        <p class="text-gray-600">
+                            Olvidate de revisar el mismo producto 10 veces al día. Nosotros lo hacemos por vos.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Simple e Intuitiva</h3>
+                        <p class="text-gray-600">
+                            Diseñada para ser fácil de usar sin configuraciones complejas ni registro obligatorio.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- ADVERTISEMENT SLOT (Placeholder para AdSense/Banner) -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <div class="bg-white p-4 sm:p-6 border border-gray-200 rounded-xl shadow-inner">
+                <p class="text-sm font-medium text-gray-500 mb-2">Espacio Publicitario (728x90)</p>
+                <!-- TU CÓDIGO DE ADSENSE DEBE IR AQUÍ -->
+                <div id="ad-slot-bottom" class="w-full h-24 bg-gray-200 flex items-center justify-center text-gray-700 font-bold border border-dashed border-gray-400 rounded-lg text-xs sm:text-base">
+                    Anuncio: Banner Responsive (ej. Google AdSense)
+                </div>
+                <!-- FIN DEL CÓDIGO DE ADSENSE -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL (CTA) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">¿Listo para empezar a ahorrar?</h2>
+            <p class="text-xl text-gray-600 mb-10">
+                Instalá la extensión en segundos o apoyá el desarrollo.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                
+                <!-- Botón de Descarga Principal -->
+                <a href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    Descargar ahora
+                </a>
+
+                <!-- Botón de Colaboración (Cafecito) - Texto Actualizado -->
+                <a href="https://cafecito.app/monitor_productos" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    Apoyá el desarrollo ☕
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (Footer) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm font-light">
+                Monitor de Productos — Creado con ❤️ para ayudarte a ahorrar.
+            </p>
+            <p class="text-xs mt-2 text-gray-400">
+                <a href="#como-funciona" class="hover:text-blue-400 transition duration-150">Cómo funciona</a> | 
+                <a href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition duration-150">Chrome Web Store</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el scroll suave de enlaces internos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
