@@ -1,676 +1,272 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <!-- Metadatos de SEO -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Monitor de Productos | Instalá gratis la extensión de precios y ofertas
-    </title>
-    <meta
-      name="description"
-      content="Monitor de Productos es la extensión de Chrome gratuita que te ayuda a seguir precios, ofertas y disponibilidad en tus tiendas online favoritas. ¡Empieza a ahorrar hoy!"
-    />
-    <meta
-      name="keywords"
-      content="monitor de precios, extensión chrome, ofertas, seguimiento de productos, ahorrar, compras online, gratis"
-    />
-    <!-- GSC Verification (Manteniendo la tuya) -->
-    <meta
-      name="google-site-verification"
-      content="wrXKOOkjqZPOJDsniKdMXGfB6TZ4paC5SmKeK6O9HbE"
-    />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>"
-    />
-    <!-- AdSense Account (Manteniendo el tuyo) -->
-    <meta name="google-adsense-account" content="ca-pub-8271320886632561" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Watchdog: Monitoreo Automático de Precios y Stock para Compras Inteligentes</title>
+    
+    <!-- Código de Google AdSense (Requerido para la aprobación) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271320886632561"
+    crossorigin="anonymous"></script>
 
-    <!-- 1. CÓDIGO ADSENSE: Etiqueta de script principal. Va en el head. -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271320886632561"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Tailwind CSS CDN y configuración (incluye Inter font) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Configuración de la fuente Inter y CSS base */
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-      body {
-        font-family: "Inter", sans-serif;
-        color: #333;
-      }
-      /* Clase para el fondo del hero */
-      .hero-bg {
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      }
-      /* Estilo para un efecto de caja en las tarjetas */
-      .card-shadow {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .card-shadow:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
-      }
+        /* Base Styling & Font */
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+        body { font-family: "Inter", sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        .card { transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
     </style>
-  </head>
-  <body class="bg-white">
-    <!-- HERO SECTION (Encabezado) -->
-    <header class="hero-bg text-white py-16 sm:py-24">
-      <div class="container mx-auto px-6 text-center max-w-4xl">
-        <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
-          Monitor de Productos
-        </h1>
-        <p class="text-xl sm:text-2xl font-light mb-10 opacity-90">
-          Tu asistente para seguir
-          <strong>precios, ofertas y disponibilidad</strong> en tus tiendas
-          online favoritas.
-        </p>
-        <!-- CTA PRINCIPAL OPTIMIZADO: Más grande y color de alto contraste (Pink) -->
-        <a
-          href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block bg-pink-500 hover:bg-pink-600 text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full shadow-2xl transition duration-300 transform hover:scale-105"
-        >
-          Instalá gratis ahora <span class="ml-2">🚀</span>
-        </a>
-      </div>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- HEADER & HERO SECTION -->
+    <header class="hero-bg text-white py-16 sm:py-24 shadow-xl">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                Offer Watchdog: La Inteligencia de Monitoreo para tus Compras Online
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                Una extensión de Chrome indispensable que te permite <strong>monitorear productos online y recibir alertas automáticas</strong> cuando cambian el precio o la disponibilidad (stock). Nunca más pagarás de más ni perderás una reposición crucial.
+            </p>
+            
+            <a href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba" target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white text-xl font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Instalá Offer Watchdog en Chrome (¡Gratis!) 🚀
+            </a>
+            <p class="text-sm mt-3 opacity-70">Monitoreo automático. Sin registro. Sin complicaciones.</p>
+        </div>
     </header>
 
-    <!-- SECCIÓN DE MOCKUP VISUAL (Iconografía o Simulación) -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <div
-          class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl border border-gray-100"
-        >
-          <!-- Simulación simple de la interfaz de la extensión en un navegador -->
-          <div class="bg-gray-800 rounded-t-lg p-2 flex items-center space-x-2">
-            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-            <div
-              class="flex-grow bg-gray-700 text-gray-400 text-xs text-center py-1 px-4 rounded-md"
-            >
-              Tienda Online de Ejemplo / Producto X
+    <!-- SECCIÓN DE VALOR EDUCATIVO Y CARACTERÍSTICAS -->
+    <section id="caracteristicas" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 border-b pb-4 text-blue-800">
+                Características Principales: Poder, Precisión y Usabilidad
+            </h2>
+            <p class="text-lg mb-12 text-center max-w-3xl mx-auto text-gray-600">
+                Offer Watchdog combina un motor de monitoreo constante con una interfaz diseñada para ser intuitiva. A continuación, detallamos las herramientas que te convertirán en un comprador estratégico.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CARACTERÍSTICA 1: Monitoreo Automático -->
+                <div class="card bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="text-3xl font-bold text-blue-600 mb-3">📡 Monitoreo Continuo</div>
+                    <h3 class="text-xl font-semibold mb-3">Rastreo Automático de Precios y Stock</h3>
+                    <p class="text-base text-gray-700">
+                        La extensión se encarga de vigilar tus productos 24/7. Esta funcionalidad es clave para detectar variaciones de precios o agotamiento/reposición de stock en <strong>múltiples tiendas online</strong>. Al automatizar esta vigilancia, eliminamos la necesidad de revisar manualmente docenas de páginas, lo cual es ineficiente y consume tiempo. Simplemente añades el producto y la extensión comienza a trabajar sin intervención, convirtiéndose en tu asistente de compras silencioso.
+                    </p>
+                </div>
+                
+                <!-- CARACTERÍSTICA 2: Notificaciones -->
+                <div class="card bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="text-3xl font-bold text-blue-600 mb-3">🔔 Alertas Instantáneas</div>
+                    <h3 class="text-xl font-semibold mb-3">Notificaciones Inmediatas en el Navegador</h3>
+                    <p class="text-base text-gray-700">
+                        La utilidad de monitorear radica en la rapidez con la que puedes actuar. Offer Watchdog te avisa con <strong>notificaciones instantáneas en el navegador ante cualquier cambio</strong> de precio o stock relevante. Esta inmediatez es vital para aprovechar ofertas fugaces que desaparecen en minutos o asegurar productos de alta demanda que se reponen por tiempo limitado. Recibirás el aviso justo cuando lo necesitas para tomar la decisión de compra sin demoras.
+                    </p>
+                </div>
+
+                <!-- CARACTERÍSTICA 3: Simplicidad y Acceso -->
+                <div class="card bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="text-3xl font-bold text-blue-600 mb-3">🔓 Acceso Directo</div>
+                    <h3 class="text-xl font-semibold mb-3">Uso sin Cuentas, Contraseñas ni Configuraciones</h3>
+                    <p class="text-base text-gray-700">
+                        Valoramos tu tiempo y tu privacidad. La extensión funciona <strong>sin cuentas ni configuraciones complicadas</strong>. No tienes que crear un usuario, recordar contraseñas o proporcionar un correo electrónico para empezar. La promesa es simple: <strong>solo instala y comienza a usar</strong>. Esta simplicidad de acceso rápido está pensada para eliminar cualquier fricción, permitiéndote concentrarte únicamente en tus compras y el ahorro potencial desde el primer momento.
+                    </p>
+                </div>
+
+                <!-- CARACTERÍSTICA 4: Historial -->
+                <div class="card bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="text-3xl font-bold text-blue-600 mb-3">📊 Historial Objetivo</div>
+                    <h3 class="text-xl font-semibold mb-3">Historial de Verificación para Cada Producto</h3>
+                    <p class="text-base text-gray-700">
+                        Offer Watchdog proporciona el <strong>historial de verificación para cada producto</strong>. Este es el componente educativo que te protege de tácticas de marketing engañosas. Al registrar los precios a lo largo del tiempo, puedes validar si el descuento actual es auténtico o si el artículo tiende a bajar aún más en ciertos periodos. Estos datos te permiten tomar una decisión informada, basando tu compra en la historia del producto y no solo en el precio momentáneo.
+                    </p>
+                </div>
+                
+                <!-- CARACTERÍSTICA 5: Interfaz -->
+                <div class="card bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="text-3xl font-bold text-blue-600 mb-3">✨ Interfaz Intuitiva</div>
+                    <h3 class="text-xl font-semibold mb-3">Gestión de Productos Rápida y Limpia</h3>
+                    <p class="text-base text-gray-700">
+                        La extensión ha sido diseñada con una <strong>interfaz intuitiva para agregar, ver y eliminar productos</strong> fácilmente. La usabilidad es clave: todas tus listas de seguimiento son accesibles con un solo clic en el icono de la extensión. La gestión es directa, permitiéndote mantener tu lista actualizada y libre de artículos irrelevantes, enfocándote en lo que realmente importa sin navegar por menús complejos.
+                    </p>
+                </div>
+
+                <!-- CARACTERÍSTICA 6: Eliminación -->
+                <div class="card bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="text-3xl font-bold text-blue-600 mb-3">🗑️ Control Total</div>
+                    <h3 class="text-xl font-semibold mb-3">Libertad para Eliminar Productos Monitoreados</h3>
+                    <p class="text-base text-gray-700">
+                        Una vez que realizaste la compra o cambiaste de opinión, tienes la libertad de <strong>eliminar productos de la lista en cualquier momento</strong>. Este control manual sobre tu lista asegura que el sistema solo monitoree los artículos que son relevantes para tus necesidades actuales, optimizando el rendimiento de la extensión en tu navegador. Puedes añadir y quitar elementos según evolucione tu lista de deseos.
+                    </p>
+                </div>
+
             </div>
-          </div>
-          <div class="p-4 sm:p-8 border-t border-gray-200">
-            <div class="flex flex-col lg:flex-row items-center justify-between">
-              <div
-                class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-10 text-center lg:text-left"
-              >
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">
-                  No te pierdas el momento justo para comprar.
-                </h2>
-                <p class="text-gray-600 text-lg mb-6">
-                  La extensión te muestra un historial de precios y te notifica
-                  instantáneamente cuando el artículo que deseas baja de valor o
-                  vuelve al stock.
+        </div>
+    </section>
+
+    <!-- SECCIÓN CÓMO FUNCIONA, USO Y FRECUENCIA DE MONITOREO -->
+    <section id="uso" class="py-16 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-blue-800">
+                La Mecánica del Ahorro: Guía de Uso y Monitoreo Horario
+            </h2>
+            <p class="text-lg mb-12 text-center max-w-3xl mx-auto text-gray-600">
+                Offer Watchdog simplifica radicalmente el proceso de seguimiento. Una vez instalada, esta es la secuencia de uso y el nivel de vigilancia que obtienes.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Columna 1: Uso Práctico y Frecuencia -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2">Ciclo de Uso Diario y Vigilancia Constante</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        El proceso para integrar Offer Watchdog a tu rutina de compras es rápido y requiere una mínima intervención de tu parte:
+                    </p>
+                    <ol class="list-decimal list-inside space-y-3 text-lg text-gray-700 ml-4 font-semibold">
+                        <!-- Corregido a <strong> -->
+                        <li><strong>Acceso:</strong> Haz clic en el icono de Offer Watchdog en la barra de extensiones.</li>
+                        <li><strong>Configuración:</strong> Añade la URL del producto que deseas monitorear y, opcionalmente, asígnale un nombre para organizarte mejor.</li>
+                    </ol>
+                    <p class="mt-6 text-lg font-bold text-gray-800 border-t pt-4">
+                        Frecuencia Crítica de Verificación
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Una vez que el producto está en la lista, no necesitas hacer nada más. La extensión toma el control: <strong>verificará automáticamente los cambios de precio y stock cada hora.</strong> Esta alta frecuencia minimiza el riesgo de que el precio baje y vuelva a subir antes de que te enteres, asegurando que el sistema detecte ofertas de corta duración. Si hay un cambio significativo, recibirás una <strong>notificación en el navegador</strong> para que puedas dirigirte al sitio web y completar la compra con la máxima rapidez.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Proceso de Instalación -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2">Guía de Instalación Técnica para Desarrolladores o Testers</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Para la versión actual, la instalación requiere el acceso a los archivos del repositorio, lo que asegura que siempre se esté probando la versión más reciente del código. Este proceso es común en las fases de testeo y uso avanzado de extensiones de Chrome:
+                    </p>
+                    <ol class="list-decimal list-inside space-y-3 text-lg text-gray-700 ml-4 font-semibold">
+                        <!-- Corregido a <strong> -->
+                        <li><strong>Paso 1: Obtener el Código:</strong> Descarga o clona este repositorio: <code class="bg-gray-200 p-1 rounded text-sm text-red-600 block my-1">git clone https://github.com/tuusuario/offer-watchdog.git</code></li>
+                        <li><strong>Paso 2: Acceder a Chrome:</strong> Abre Chrome y navega a la página de extensiones: <code class="bg-gray-200 p-1 rounded text-sm text-red-600 block my-1">chrome://extensions/</code></li>
+                        <li><strong>Paso 3: Modo Desarrollador:</strong> Activa el <strong>Modo desarrollador</strong> (un interruptor que suele estar en la esquina superior derecha).</li>
+                        <li><strong>Paso 4: Carga Local:</strong> Haz clic en <strong>Cargar descomprimida</strong> y selecciona la carpeta del proyecto que descargaste.</li>
+                    </ol>
+                    <p class="mt-6 text-lg font-bold text-gray-800">
+                        ¡Listo! La extensión aparecerá en tu barra de extensiones, lista para ser usada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NOVEDADES Y OPTIMIZACIÓN DE UX -->
+    <section id="novedades" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-blue-800">
+                Novedades en Usabilidad: Formulario Desplegable Optimizado
+            </h2>
+            <p class="text-lg mb-8 max-w-3xl mx-auto text-gray-600">
+                La interfaz evoluciona para mejorar la experiencia de usuario, haciendo el monitoreo más limpio y eficiente.
+            </p>
+
+            <div class="max-w-4xl mx-auto p-8 rounded-xl bg-indigo-50 shadow-xl border-l-4 border-indigo-500">
+                <div class="text-4xl mb-4">✨</div>
+                <h3 class="text-2xl font-semibold mb-4">Mejora Implementada: Vista más Limpia para el Monitoreo Diario</h3>
+                <p class="text-lg text-gray-700 text-left">
+                    Una de las mejoras más importantes es la optimización de la sección para agregar productos. Reconociendo que el usuario pasa más tiempo revisando sus productos monitoreados que añadiendo nuevos, hemos optimizado el espacio de la interfaz:
                 </p>
-                <!-- Barra simulada de la extensión -->
-                <div
-                  class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg"
-                >
-                  <p class="font-semibold text-blue-800">
-                    💰 ¡Alerta! El precio bajó de $150 a $99.
-                  </p>
+                <ul class="list-disc list-inside space-y-2 mt-4 text-lg text-gray-700 text-left font-semibold">
+                    <!-- Corregido a <strong> -->
+                    <li><strong>Plegada por Defecto:</strong> La sección para añadir una nueva URL <strong>ahora se encuentra plegada por defecto</strong>.</li>
+                    <li><strong>Fácil Acceso:</strong> Se puede desplegar fácilmente haciendo clic en la fila <strong>"Agregar producto ▼"</strong>.</li>
+                </ul>
+                <p class="text-lg text-gray-700 mt-4 text-left">
+                    Este cambio permite una <strong>vista más limpia y organizada</strong> cuando solo se desea revisar el estado actual de los productos que ya están siendo monitoreados, reduciendo la distracción y mejorando la fluidez de la gestión diaria. Es un paso clave para hacer la interfaz más ergonómica y funcional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTRIBUCIÓN Y LICENCIA (Valiosa para la confianza de Google) -->
+    <section id="contribucion" class="py-16 bg-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 border-b pb-4 text-blue-800">
+                Software Propietario y el Proceso de Contribución
+            </h2>
+            <p class="text-lg mb-8 text-center max-w-3xl mx-auto text-gray-600">
+                Offer Watchdog es un proyecto abierto a la colaboración, pero se rige bajo una estricta política de licencia. La transparencia en el proceso legal y de desarrollo es vital para la confianza.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Columna 1: Proceso de Contribución -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2">Participación y Colaboración Técnica</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        ¡Las contribuciones son bienvenidas! Si tienes ideas, mejoras o encuentras errores, la mejor manera de ayudar es a través de los canales de desarrollo estándar de GitHub, asegurando que la herramienta sea lo más robusta posible.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4 font-semibold">
+                        <!-- Corregido a <strong> -->
+                        <li><strong>Reporte:</strong> Abre un *issue* o haz un *pull request*.</li>
+                        <li><strong>Inicio:</strong> Haz un *fork* del repositorio.</li>
+                        <li><strong>Desarrollo:</strong> Crea una rama para tu *feature* o *fix*: <code class="bg-gray-300 p-1 rounded text-sm text-red-600">git checkout -b mi-feature</code>.</li>
+                        <li><strong>Registro:</strong> Haz tus cambios y *commitea*: <code class="bg-gray-300 p-1 rounded text-sm text-red-600">git commit -m "Agrega mi feature"</code>.</li>
+                        <li><strong>Envío:</strong> Haz *push* a tu rama: <code class="bg-gray-300 p-1 rounded text-sm text-red-600">git push origin mi-feature</code>.</li>
+                        <li><strong>Finalización:</strong> Abre un *Pull Request* para su revisión e integración.</li>
+                    </ul>
                 </div>
-              </div>
-              <div class="lg:w-1/2 w-full max-w-md">
-                <!-- Placeholder visual: Gráfico de ejemplo -->
-                <div
-                  class="bg-gray-100 p-6 rounded-lg shadow-inner border border-gray-300"
-                >
-                  <p class="text-sm font-medium text-center text-gray-500 mb-4">
-                    Gráfico de Precio Histórico
-                  </p>
-                  <svg
-                    viewbox="0 0 300 150"
-                    class="w-full h-auto"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <!-- Ejes -->
-                    <line
-                      x1="20"
-                      y1="20"
-                      x2="20"
-                      y2="130"
-                      stroke="#9ca3af"
-                      stroke-width="1"
-                    />
-                    <line
-                      x1="20"
-                      y1="130"
-                      x2="280"
-                      y2="130"
-                      stroke="#9ca3af"
-                      stroke-width="1"
-                    />
-                    <!-- Datos de ejemplo: Precio bajando (simulado) -->
-                    <polyline
-                      fill="none"
-                      stroke="#f59e0b"
-                      stroke-width="3"
-                      points="20,100 80,80 140,90 200,60 260,30"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <!-- Punto de alerta (más bajo) -->
-                    <circle cx="260" cy="30" r="5" fill="#ef4444" />
-                    <text x="250" y="25" class="text-xs fill-red-600 font-bold">
-                      ¡Hoy!
-                    </text>
-                  </svg>
+                <!-- Columna 2: Licencia y Contacto -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2">Licencia Propietaria y Contacto</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Es fundamental comprender la base legal que rige este proyecto:
+                    </p>
+                    <div class="p-4 rounded-lg bg-red-100 border border-red-300 mb-6">
+                        <p class="font-bold text-red-800">Licencia:</p>
+                        <p class="text-red-700 text-base">Este proyecto es <strong>software propietario</strong>. Queda prohibida la copia, distribución o uso del código fuente, en total o en parte, sin autorización expresa del autor. Este punto es inalterable.</p>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2">Vías de Contacto y Soporte</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Si tienes dudas o sugerencias que no encajan en el formato de *issue* de GitHub, tienes las siguientes opciones:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4 font-semibold">
+                        <!-- Corregido a <strong> -->
+                        <li><strong>Dudas y Sugerencias:</strong> Abre un *issue* en GitHub.</li>
+                        <li><strong>Contacto Directo:</strong> Contacta al autor del proyecto.</li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- SECCIÓN CÓMO FUNCIONA -->
-    <section id="como-funciona" class="py-20">
-      <div class="container mx-auto px-6 text-center max-w-5xl">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">
-          Fácil de usar en 3 simples pasos
-        </h2>
+    <!-- LLAMADO A LA ACCIÓN FINAL Y FOOTER -->
+    <footer class="hero-bg py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-white">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6">
+                Dejá de buscar ofertas. Dejá que las ofertas te encuentren.
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                
+                <!-- CTA Principal -->
+                <a href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white text-xl font-bold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Instalá Offer Watchdog Ahora
+                </a>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Paso 1 -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl card-shadow flex flex-col items-center"
-          >
-            <span class="text-5xl text-blue-600 mb-4">1</span>
-            <div class="text-3xl mb-3">
-              <svg
-                class="w-10 h-10 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                ></path>
-              </svg>
+                <!-- Enlace de Donación Cafecito -->
+                <a href="https://cafecito.app/monitor_productos" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-gray-900 text-lg font-bold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Invitanos un ☕ (Donación)
+                </a>
             </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Instalá la extensión
-            </h3>
-            <p class="text-gray-600">
-              Añadí "Monitor de Productos" desde la Chrome Web Store en un solo
-              clic.
-            </p>
-          </div>
 
-          <!-- Paso 2 -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl card-shadow flex flex-col items-center"
-          >
-            <span class="text-5xl text-blue-600 mb-4">2</span>
-            <div class="text-3xl mb-3">
-              <svg
-                class="w-10 h-10 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Seleccioná tus favoritos
-            </h3>
-            <p class="text-gray-600">
-              Navegá por tus tiendas y marcá los productos que querés seguir.
+            <p class="mt-10 text-sm opacity-70">
+                Offer Watchdog (Monitor de Productos) es una extensión de Chrome.
+                <br>
+                Software Propietario © 2024. Todos los derechos reservados.
             </p>
-          </div>
-
-          <!-- Paso 3 -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl card-shadow flex flex-col items-center"
-          >
-            <span class="text-5xl text-blue-600 mb-4">3</span>
-            <div class="text-3xl mb-3">
-              <svg
-                class="w-10 h-10 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Recibí alertas
-            </h3>
-            <p class="text-gray-600">
-              Te avisamos cuando el precio baje o el producto vuelva a estar
-              disponible.
-            </p>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN DE BENEFICIOS -->
-    <section class="py-20 bg-blue-50">
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2
-          class="text-3xl sm:text-4xl font-bold text-gray-800 mb-10 text-center"
-        >
-          Beneficios clave
-        </h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.592 1M12 8V7m0 12v-1m-2-2h4M12 0a12 12 0 100 24 12 12 0 000-24z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800">
-                Ahorro Inteligente
-              </h3>
-              <p class="text-gray-600">
-                Nunca más pagues de más. Te asegurás de comprar siempre al mejor
-                precio.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800">100% Gratuita</h3>
-              <p class="text-gray-600">
-                Todas las funciones esenciales de seguimiento de precios están
-                disponibles sin costo.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800">Ahorrá Tiempo</h3>
-              <p class="text-gray-600">
-                Olvidate de revisar el mismo producto 10 veces al día. Nosotros
-                lo hacemos por vos.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex-shrink-0 p-3 rounded-full bg-emerald-100 text-emerald-600"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-gray-800">
-                Simple e Intuitiva
-              </h3>
-              <p class="text-gray-600">
-                Diseñada para ser fácil de usar sin configuraciones complejas ni
-                registro obligatorio.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN DE RESEÑAS / TESTIMONIOS (NUEVO) -->
-    <section class="py-20 bg-white border-t border-gray-100">
-      <div class="container mx-auto px-6 max-w-6xl text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-12">
-          Lo que dicen nuestros usuarios
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Testimonio 1 -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center card-shadow"
-          >
-            <div
-              class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center font-bold text-blue-800 mb-4"
-            >
-              M.G.
-            </div>
-            <p class="italic text-gray-700 mb-4">
-              "Excelente extensión, me ahorra muchísimo tiempo comparando
-              precios. Es indispensable para comprar online."
-            </p>
-            <p class="font-semibold text-sm text-gray-900">— Martín G.</p>
-          </div>
-
-          <!-- Testimonio 2 -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center card-shadow"
-          >
-            <div
-              class="w-12 h-12 bg-emerald-200 rounded-full flex items-center justify-center font-bold text-emerald-800 mb-4"
-            >
-              A.R.
-            </div>
-            <p class="italic text-gray-700 mb-4">
-              "Las alertas funcionan perfecto. Pude comprar ese artículo que
-              esperaba justo cuando bajó su precio."
-            </p>
-            <p class="font-semibold text-sm text-gray-900">— Ana R.</p>
-          </div>
-
-          <!-- Testimonio 3 -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center card-shadow"
-          >
-            <div
-              class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center font-bold text-pink-800 mb-4"
-            >
-              J.P.
-            </div>
-            <p class="italic text-gray-700 mb-4">
-              "Simple, liviana y hace exactamente lo que promete. La mejor
-              herramienta para el seguimiento de ofertas."
-            </p>
-            <p class="font-semibold text-sm text-gray-900">— Juan P.</p>
-          </div>
-
-          <!-- Testimonio 4 (Visible en desktop) -->
-          <div
-            class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-100 flex-col items-center card-shadow hidden lg:flex"
-          >
-            <div
-              class="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center font-bold text-yellow-800 mb-4"
-            >
-              E.L.
-            </div>
-            <p class="italic text-gray-700 mb-4">
-              "Me ayudó a encontrar un producto que estaba agotado. La función
-              de stock es un salvavidas."
-            </p>
-            <p class="font-semibold text-sm text-gray-900">— Elena L.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ADVERTISEMENT SLOT (Placeholder para AdSense/Banner) -->
-    <section class="py-12 bg-gray-100">
-      <div class="container mx-auto px-6 text-center max-w-4xl">
-        <div
-          class="bg-white p-4 sm:p-6 border border-gray-200 rounded-xl shadow-inner"
-        >
-          <!-- TU CÓDIGO DE ADSENSE DEBE IR AQUÍ (Ej: <ins class="adsbygoogle" ...>) -->
-          <div
-            id="ad-slot-bottom"
-            class="w-full h-24 bg-gray-200 flex items-center justify-center text-gray-700 font-bold border border-dashed border-gray-400 rounded-lg text-xs sm:text-base"
-          >
-            <script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8271320886632561"
-              crossorigin="anonymous"
-            ></script>
-          </div>
-          <!-- FIN DEL CÓDIGO DE ADSENSE -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN DE GARANTÍA DE PRIVACIDAD (NUEVO) -->
-    <section class="py-16 bg-blue-700 text-white">
-      <div class="container mx-auto px-6 text-center max-w-4xl">
-        <h2 class="text-3xl font-bold mb-4 flex items-center justify-center">
-          <svg
-            class="w-8 h-8 mr-3 text-emerald-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-            ></path>
-          </svg>
-          Privacidad garantizada
-        </h2>
-        <p
-          class="text-xl font-semibold mb-8 border-b-2 border-emerald-400 inline-block pb-1"
-        >
-          No recolectamos ni compartimos tu información personal.
-        </p>
-        <!-- CORRECCIÓN: Usar <span> con clase Tailwind para negrita en lugar de Markdown -->
-        <p class="text-lg font-light mb-6">
-          Todos los datos se almacenan
-          <span class="font-semibold">localmente en tu navegador</span>.
-        </p>
-
-        <a
-          href="#politica-privacidad"
-          class="inline-block text-emerald-400 hover:text-emerald-300 font-medium transition duration-150 border-b border-emerald-400 hover:border-emerald-300"
-        >
-          Ver Política de privacidad clara y accesible
-        </a>
-      </div>
-    </section>
-
-    <!-- POLÍTICA DE PRIVACIDAD DETALLADA (NUEVO) -->
-    <section
-      id="politica-privacidad"
-      class="py-20 bg-gray-50 border-t border-gray-200"
-    >
-      <div class="container mx-auto px-6 max-w-4xl">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
-          Política de Privacidad (Resumen Transparente)
-        </h2>
-
-        <div class="space-y-6 text-left">
-          <div class="p-4 bg-white rounded-lg shadow-md">
-            <h3 class="font-bold text-xl text-gray-800 mb-2">
-              1. Cero Recolección de Datos Personales
-            </h3>
-            <p class="text-gray-700">
-              La extensión está diseñada para funcionar sin necesidad de
-              registrarse.
-              <strong
-                >No recolectamos, almacenamos ni compartimos tu nombre, correo
-                electrónico, ni historial de navegación personal.</strong
-              >
-            </p>
-          </div>
-
-          <div class="p-4 bg-white rounded-lg shadow-md">
-            <h3 class="font-bold text-xl text-gray-800 mb-2">
-              2. Almacenamiento 100% Local
-            </h3>
-            <p class="text-gray-700">
-              Toda la información sobre los productos que eliges seguir (URLs,
-              historial de precios, alertas) se guarda de forma segura y cifrada
-              <strong
-                >directamente en el almacenamiento de tu navegador
-                Chrome</strong
-              >. Nadie más tiene acceso a esos datos, ni siquiera nosotros.
-            </p>
-          </div>
-
-          <div class="p-4 bg-white rounded-lg shadow-md">
-            <h3 class="font-bold text-xl text-gray-800 mb-2">
-              3. Uso de Google AdSense
-            </h3>
-            <p class="text-gray-700">
-              Para mantener esta herramienta gratuita, utilizamos Google AdSense
-              en la landing page. AdSense puede usar cookies para mostrar
-              anuncios relevantes. Puedes gestionar tus preferencias de anuncios
-              a través de la configuración de Google.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CALL TO ACTION FINAL (CTA SECUNDARIO OPTIMIZADO) -->
-    <section class="py-20 bg-white border-t border-gray-200">
-      <div class="container mx-auto px-6 text-center max-w-4xl">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-          ¡Empezá a ahorrar hoy mismo!
-        </h2>
-        <p class="text-xl text-gray-600 mb-10">
-          Añadí Monitor de Productos a Chrome en segundos. Es totalmente gratis.
-        </p>
-
-        <div
-          class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
-        >
-          <!-- Botón de Descarga Principal (Idéntico al Header) -->
-          <a
-            href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block bg-pink-500 hover:bg-pink-600 text-white text-xl sm:text-2xl font-bold py-4 px-10 rounded-full shadow-2xl transition duration-300 transform hover:scale-105"
-          >
-            Instalá gratis ahora <span class="ml-2">🚀</span>
-          </a>
-
-          <!-- Botón de Colaboración (Cafecito) -->
-          <a
-            href="https://cafecito.app/monitor_productos"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block bg-orange-500 hover:bg-orange-600 text-white text-lg font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105 hover:shadow-2xl"
-          >
-            Apoyá el desarrollo ☕
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PIE DE PÁGINA (Footer) -->
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-6 text-center">
-        <p class="text-sm font-light">
-          Monitor de Productos — Creado con ❤️ para ayudarte a ahorrar.
-        </p>
-        <p class="text-xs mt-2 text-gray-400">
-          <a
-            href="#como-funciona"
-            class="hover:text-blue-400 transition duration-150"
-            >Cómo funciona</a
-          >
-          |
-          <a
-            href="#politica-privacidad"
-            class="hover:text-blue-400 transition duration-150"
-            >Privacidad</a
-          >
-          |
-          <a
-            href="https://chromewebstore.google.com/detail/monitor-de-productos/gnloopghiogbfcnkakbbjmifhmldfjba"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-blue-400 transition duration-150"
-            >Chrome Web Store</a
-          >
-        </p>
-      </div>
     </footer>
 
-    <!-- JavaScript para el scroll suave de enlaces internos -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-              behavior: "smooth",
-            });
-          });
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>
